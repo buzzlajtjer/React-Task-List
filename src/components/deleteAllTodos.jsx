@@ -3,7 +3,7 @@ import React, { Component } from "react";
 class DeleteAllTodos extends Component {
   getStyle = () => {
     return {
-      visibility: this.props.todos.length < 1 ? "hidden" : "visible"
+      visibility: this.props.todos.length < 2 ? "hidden" : "visible"
     };
   };
   render() {
