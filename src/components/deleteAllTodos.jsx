@@ -10,7 +10,7 @@ class DeleteAllTodos extends Component {
     return (
       <div className="del-all-wrapper" style={this.getStyle()}>
         <button
-          className="btn-del btn-margin-top"
+          className="btn-del-all btn-margin-top"
           onClick={this.props.handleDeleteAll}
         >
           Delete All Tasks
