@@ -12,6 +12,7 @@ class Todos extends Component {
             handleDelete={this.props.handleDelete}
             key={todo.id}
             todo={todo}
+            todos={this.props.todos}
           />
         ))}
       </div>

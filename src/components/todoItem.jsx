@@ -8,12 +8,18 @@ class TodoItem extends Component {
     };
   };
 
+  getEmptyListStyle = () => {
+    return {
+      borderBottom: this.props.todos.length === 1 ? "0px" : "1px #fff solid"
+    };
+  };
+
   render() {
     const { handleCheck, handleDelete } = this.props;
     const { title, id } = this.props.todo;
 
     return (
-      <div className="todo-wrapper">
+      <div className="todo-wrapper" style={this.getEmptyListStyle()}>
         <input type="checkbox" onChange={handleCheck.bind(this, id)} />
         <p id="task-title" style={this.getCheckedStyle()}>
           {title}

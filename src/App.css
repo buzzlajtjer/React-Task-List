@@ -54,6 +54,13 @@ input {
   justify-content: center;
 }
 
+.del-all-wrapper {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+}
+
 .header-text {
   text-align: center;
   margin-top: 10px;
@@ -70,5 +77,8 @@ input {
   flex-direction: row;
   background-color: #f4f4f4;
   padding: 10px;
-  border-bottom: 1px black dotted;
+}
+
+.btn-margin-top {
+  margin-top: 10px;
 }

@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./App.css";
 import Todos from "./components/todos";
 import AddTodos from "./components/addTodo";
+import DeleteAllTodos from "./components/deleteAllTodos";
 
 class App extends Component {
   state = {
@@ -47,6 +48,12 @@ class App extends Component {
     console.log(newTodos);
   };
 
+  handleDeleteAll = () => {
+    console.log("Everything deleted");
+    const noTodos = [];
+    this.setState({ todos: noTodos });
+  };
+
   render() {
     return (
       <div>
@@ -56,6 +63,10 @@ class App extends Component {
           todos={this.state.todos}
           handleCheck={this.handleCheck}
           handleDelete={this.handleDelete}
+        />
+        <DeleteAllTodos
+          handleDeleteAll={this.handleDeleteAll}
+          todos={this.state.todos}
         />
       </div>
     );
