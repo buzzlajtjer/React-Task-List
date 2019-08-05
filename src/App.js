@@ -31,16 +31,9 @@ class App extends Component {
     console.log("Todo Added");
     const newTodos = [...this.state.todos];
     const input = document.getElementById("input-add");
-
-    input.addEventListener("keyup", e => {
-      if (e.keyCode === 13) {
-        e.preventDefault();
-        document.getElementById("add-btn").click();
-      }
-    });
-
     let theLength = newTodos.length;
     let inc = theLength++;
+
     if (input.value === "" || input.value === null) {
       input.style = "border: 1px solid red";
     } else {
@@ -52,6 +45,13 @@ class App extends Component {
       });
       input.value = "";
     }
+
+    input.addEventListener("keyup", e => {
+      if (e.keyCode === 13) {
+        document.getElementById("add-btn").click();
+      }
+    });
+
     this.setState({ todos: newTodos });
     console.log(newTodos);
   };

@@ -42,7 +42,8 @@ a {
   border: 0px;
 }
 
-.btn-del:hover {
+.btn-del:hover,
+.btn-del-all:hover {
   background-color: red;
 }
 
