@@ -36,6 +36,7 @@ class App extends Component {
 
     if (input.value === "" || input.value === null) {
       input.style = "border: 1px solid red";
+      return null;
     } else {
       input.style = "border: 1px solid black";
       newTodos.push({
