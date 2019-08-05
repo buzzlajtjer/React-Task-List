@@ -31,8 +31,6 @@ class App extends Component {
     console.log("Todo Added");
     const newTodos = [...this.state.todos];
     const input = document.getElementById("input-add");
-    let theLength = newTodos.length;
-    let inc = theLength++;
 
     if (input.value === "" || input.value === null) {
       input.style = "border: 1px solid red";
@@ -40,7 +38,7 @@ class App extends Component {
     } else {
       input.style = "border: 1px solid black";
       newTodos.push({
-        id: inc,
+        id: Math.floor(Math.random() * 9999),
         title: input.value,
         completed: false
       });
