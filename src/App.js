@@ -66,7 +66,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <h1 className="header-text">Daily Tasks</h1>
+        <h1 className="header-text">Daily Tasks {this.state.todos.length}</h1>
         <AddTodos handleAddTodo={this.handleAddTodo} />
         <Todos
           todos={this.state.todos}
