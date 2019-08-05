@@ -5,7 +5,11 @@ class AddTodo extends Component {
     return (
       <div className="add-wrapper">
         <input type="text" id="input-add" />
-        <button className="btn-add" onClick={this.props.handleAddTodo}>
+        <button
+          id="add-btn"
+          className="btn-add"
+          onClick={this.props.handleAddTodo}
+        >
           Add Task
         </button>
       </div>

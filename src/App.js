@@ -31,6 +31,14 @@ class App extends Component {
     console.log("Todo Added");
     const newTodos = [...this.state.todos];
     const input = document.getElementById("input-add");
+
+    input.addEventListener("keyup", e => {
+      if (e.keyCode === 13) {
+        e.preventDefault();
+        document.getElementById("add-btn").click();
+      }
+    });
+
     let theLength = newTodos.length;
     let inc = theLength++;
     if (input.value === "" || input.value === null) {
